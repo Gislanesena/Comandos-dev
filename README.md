@@ -8,8 +8,24 @@ git push
 
 //Status e Histórico 
 
-git status              # ver alterações
-git log --oneline       # histórico resumido
+git status                             # ver alterações
+git log --oneline                      # histórico resumido
+git log                                #ver os commits
+git checkout <id-do-commit>            #acessar uma versão sem apagar nada
+git checkout -b nome-da-nova-branch    #trabalhar na versão escolhida
+
+//Reset
+
+git reset --soft <commit>      #Voltar mantendo alterações
+git reset --mixed <commit>     #Voltar mantendo arquivos, mas não commits
+git reset --hard <commit>      #Voltar apagando tudo
+
+
+//Recuperar 
+
+git reflog                #vai mostrar tudo que foi feito
+git reset --hard xyz789   #recupera
+
 
 //Adicionar e Alterar arquivos 
 
@@ -31,6 +47,15 @@ git branch nome         # criar branch
 
 git switch nome         # trocar de branch
 git checkout nome       # alternativa
+
+//Mandar branch para main depois de resolvido os conflitos
+
+git checkout main
+git pull
+git merge sua-branch
+git push
+
+git branch backup    #criar checkpoint
 
 //Merge - juntar branches 
 
