@@ -2,6 +2,7 @@
 Arsenal de Comandos para consultas
 
 # git básico
+git init
 git add .
 git commit -m "msg"
 git push
