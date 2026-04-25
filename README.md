@@ -66,6 +66,7 @@ git restore arquivo.txt      # Desfaz alterações que não foram commitadas
 
 git restore nome-arquivo  # Descarta alterações de um arquivo específico que ainda não foram commitadas.
 git reset --hard          # Volta o projeto inteiro para o último commit e apaga todas as alterações não salvas
+git checkout -- .         # Descarta alterações não comitadas 
 
 //Salvar temporário 
 
