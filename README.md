@@ -1,7 +1,7 @@
-# Comandos-dev
-Arsenal de Comandos para consulta
+# 🚀 Comandos-dev
+## Arsenal de Comandos para consulta
 
-# git básico
+## git básico
 git init                    # Cria um repositório Git na pasta atual - Usar quando o projeto está local e você quer começar a versionar
 git add .                   # Salva as mudanças feitas, coloca o arquivo na área de preparo (adiciona tudo)
 git add exemplo.html        # Salva mudanças específicas 
@@ -9,7 +9,7 @@ git commit -m "msg"         # Cria uma versão do projeto (importante incluir me
 git push -u origin (branch) # Envia seu código para o GitHub
 git remote add origin (URL) # Conecta seu projeto local ao GitHub (usar depois de ter um repositório criado no GitHub)
 
-//Status e Histórico 
+## Status e Histórico 
 
 git status                             # Mostra tudo que está acontecendo (arquivos modificados e não rastreados)
 git log --oneline                      # histórico resumido
@@ -17,14 +17,14 @@ git log                                #ver os commits
 git checkout <id-do-commit>            #acessar uma versão sem apagar nada
 git checkout -b nome-da-nova-branch    #trabalhar na versão escolhida
 
-//Reset
+## Reset
 
 git reset --soft <commit>      #Voltar commit mantendo alterações
 git reset --mixed <commit>     #Voltar commit mantendo arquivos, mas não commits
 git reset --hard <commit>      #Voltar commit apagando tudo
 
 
-//Recuperar e Ver histórico 
+## Recuperar e Ver histórico 
 
 git log                           # Histórico completo
 git log --oneline --graph --all   # Mostra commits resumidos, estrutura das branches e histórico visual
@@ -34,20 +34,20 @@ git reset --hard (n° commit)      # Move seu projeto inteiro para o commit e ap
 git diff                          # Mostra o que mudou no código
 
 
-//Adicionar e Alterar arquivos 
+## Adicionar e Alterar arquivos 
 
 git add .                 # adiciona tudo
 git add nome-arquivo      # adiciona específico
 git commit -m "mensagem"  # Slava as atualizações na branch
 
-//Enviar ou Puxar do Github 
+## Enviar ou Puxar do Github 
 
 git push                # envia mudanças
 git pull                # puxa mudanças
 git fetch               # atualiza sem aplicar
 git clone https:/****   # Baixa um repositório do GitHub pra sua máquina (Usar quando o projeto já existe no GitHub)
 
-//Branches 
+# Branches 
 
 git branch                   # listar branches existentes e também verificar em qual você está 
 git branch (nome)            # criar branch
@@ -62,27 +62,27 @@ git push -u origin (branch)  # Envia seu código para o GitHub
 git restore arquivo.txt      # Desfaz alterações que não foram commitadas
 
 
-//Descartar alterações 
+## Descartar alterações 
 
 git restore nome-arquivo  # Descarta alterações de um arquivo específico que ainda não foram commitadas.
 git reset --hard          # Volta o projeto inteiro para o último commit e apaga todas as alterações não salvas
 git checkout -- .         # Descarta alterações não comitadas 
 
-//Salvar temporário 
+## Salvar temporário 
 
 git stash         # Guarda alterações sem precisar commitar
 git stash pop     # Recuperar o commit
 git stash list    # Ver Lista
 
-//Conectar GitHub
+## Conectar GitHub
 
 git remote add origin URL
 git push -u origin main
 
 
-*************DOCKER****************
+# DOCKER
 
-//Rodar postgresql
+## Rodar postgresql
 
 docker run                        # Cria e inicia um container
 docker run --name postgres-db     # inicia um container que já existe
@@ -90,74 +90,70 @@ docker run --name postgres-db     # inicia um container que já existe
 -p 5432:5432                      # Mapeia portas
 -d postgres                       # Roda o container em segundo plano
 
-# subir banco
+## subir banco
 docker start postgres-db         # Roda um container
 docker ps                        # Lista todos os containers que estão rodando no momento.
 
-// Iniciar ou parar
+## Iniciar ou parar
 
 docker start postgres-db
 docker stop postgres-db
 
-//Entrar no container 
+## Entrar no container 
 
 docker exec -it postgres-db bash
 
-//Entrar no banco 
+## Entrar no banco 
 
 psql -U postgres
 
-//Ver bancos 
+## Ver bancos 
 
 \l
 
-//Conectar banco 
+## Conectar banco 
 
 \c nome-container
 
-//Ver tabelas 
+## Ver tabelas 
 
 \dt
 
-****************BANCO DE DADOS*****************
+# BANCO DE DADOS
 
-//Inserir usuário 
+## Inserir usuário 
 
 INSERT INTO usuarios (nome_usuario, senha_hash, eh_admin)
 VALUES ('admin', 'HASH_AQUI', true);
 
-//Buscar usuario
+## Buscar usuario
 
 SELECT * FROM usuarios;
 
-//Deletar
+## Deletar
 
 DELETE FROM usuarios WHERE id = 1;
 
-//Atualizar 
+## Atualizar 
 
 UPDATE usuarios SET nome_usuario = 'novo' WHERE id = 1;
 
-*************DOTNET*******************
+# DOTNET
 
-//Rodar o projeto 
+## Rodar o projeto 
 
 dotnet run
 
-//Restaura pendencias 
+## Restaura pendencias 
 
 dotnet restore
 
-//Instalar pacote 
+## Instalar pacote 
 
 dotnet add package Npgsql
 
-//Buildar projeto 
+## Buildar projeto 
 
 dotnet build
 
 
-
-git switch -c nome      # cria e troca
-
-//
